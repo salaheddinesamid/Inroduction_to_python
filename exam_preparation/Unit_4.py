@@ -36,7 +36,7 @@ A variable or a function is said to be in scope, if the interpreter can recogniz
 
 # 1- Local variable:
 """
-Local variables: are variables or functions that are defined inside of of a function and only accessible within it.
+Local variables: are variables or functions that are defined inside of of a function and only be accessible within it.
 """
 
 
@@ -54,8 +54,7 @@ except NameError:
 
 # 2- Global variable:
 """
-Global variable : are variables or functions that are defined 
-outside the function and are accessible throughout the entire program.
+Global variable : are variables or functions that are defined outside the function and are accessible throughout the entire program.
 """
 global_variable = 100
 logging.info("Defining global_variable: {}".format(global_variable))
@@ -67,3 +66,7 @@ def another_function():
 
 
 logging.info("Accessing the variable outside the function.")
+
+# 3- Nested scope:
+"""Nested scope: variables and functions that are defined within a nested function are only accessible within that 
+specific function."""
