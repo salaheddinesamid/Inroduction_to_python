@@ -7,6 +7,8 @@ and return to the point right after the function was called.
 """
 import logging
 
+logging.basicConfig(level=logging.DEBUG,
+                    format="%(asctime)s - %(levelname)s - %(message)s")
 # -------------------- Creating a custom function:
 """
 To create a custom function, the following steps must be followed:
@@ -70,3 +72,100 @@ logging.info("Accessing the variable outside the function.")
 # 3- Nested scope:
 """Nested scope: variables and functions that are defined within a nested function are only accessible within that 
 specific function."""
+
+
+def main_function():
+    def nested_func():
+        nested_variable = 20
+        print(nested_variable)
+
+    nested_func()
+
+
+# ------------------------ Arguments:
+
+"""
+Arguments : allow the function to accept external data.
+They are also called parameters.
+"""
+
+
+# This function takes two arguments (x,y) and return their sum:
+def my_func(x, y):
+    return x + y
+
+
+my_func(5, 10)
+
+"""
+Attention : The number of arguments provided during the function call must match the number of parameters defined in the 
+function.
+
+There are two types of arguments:
+1- Positional arguments : These are matched to parameters based on their position in the function call.
+2- Named arguments : Arguments can be specified by name, allowing them to be provided in any order.
+"""
+
+
+# 1- Positional arguments:
+
+def positional_args(a, b):
+    logging.info("The value of a = {}".format(a))
+    logging.info("The value of b = {}".format(b))
+
+
+# 2- Named arguments:
+
+def named_args(name, phone):
+    logging.info("Hello {}".format(name) + ", your phone number is: {}".format(phone))
+
+
+named_args(name="John", phone="+3182086229")
+
+# --------------------- Default arguments:
+"""
+Default argument : provide present value if the caller doesn't supply one.
+Rules for default arguments : 
+* Default arguments must appear on the right side of the parameter.
+* You can not place a parameter with a default before one without a default.
+"""
+
+
+def default_args(y, x = 30): # The default parameter must appear at the right!
+    return y * x
+
+# ----------------------- Return values:
+"""
+Functions can also send back results to the caller using return keyword.
+The return statement ends the function's execution and sends a value back where the function was called.
+"""
+
+def return_max_num(arr):
+    max = 0
+    for item in arr:
+        if item >= max:
+            max = item
+    return max
+
+def sort_array(arr):
+    l = len(arr)
+    for index in range(0,l):
+        toInsert = arr[index]
+        j = index
+        while j > 0:
+            if toInsert > arr[j - 1]:
+                break
+            arr[j] = arr[j-1]
+            j -= 1
+        arr[j] = toInsert
+
+# Return multiple values:
+"""
+Functions can return multiple values by separating them with commas.
+"""
+def mutli_return(x,y):
+    return x*2,y*2
+
+a , b = mutli_return(2,4)
+print(a)
+print(b)
