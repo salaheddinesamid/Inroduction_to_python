@@ -166,6 +166,4 @@ Functions can return multiple values by separating them with commas.
 def mutli_return(x,y):
     return x*2,y*2
 
-a , b = mutli_return(2,4)
-print(a)
-print(b)
+a , b = mutli_return(2,4) # 'a' will hold the value of x*2 and 'y' will hold the value of y*2
