@@ -9,7 +9,7 @@ Creating a variable in Python require few rules:
 1- begin with a letter or underscore.
 2- contains only letters, numbers or underscores.
 3- be all lowercase.
-4- words contains mutli-words should be separated with underscore.
+4- words contains multi-words should be separated with underscore.
 5- descriptive
 """
 # This variable holds information about my name:
@@ -18,7 +18,7 @@ my_name = "Salaheddine"  # String data type
 # This variable holds information about my age:
 my_age = 20  # Integer data type
 
-# Accidental varibale creation
+# Accidental variable creation
 # Here we will try to update my_age
 
 my_age = 29  # This will not throw an error
@@ -77,6 +77,7 @@ new_str_2 = str2.replace('fun', "hard")
 """
 A set is an unordered collection of unique items, 
 it's great for storing items where the order doesn't matter and duplicates are not allowed.
+
 - Characteristics:
 * Unordered.
 * Unique.
@@ -98,7 +99,7 @@ frozen_players = frozenset({"Messi", "Ronaldo"})
 
 # 2 List:
 """
-List is a ordered collection of items, where duplicates are allowed.
+List is an ordered collection of items, where duplicates are allowed.
 It allows you to store items in a specific order and access it with index.
 
 - Characteristics: 

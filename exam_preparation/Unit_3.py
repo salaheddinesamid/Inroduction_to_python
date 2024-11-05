@@ -51,7 +51,7 @@ Boolean expressions : evaluates to either True or False.
 
 # 1- For loop:
 """
-range() function, takes at least one arguments, and generates a sequence of numbers.
+range() function, takes at least one argument, and generates a sequence of numbers.
 It has three parameters:
 * start (optional): starting of the sequence.
 * stop : ending point.
@@ -136,3 +136,4 @@ my_numbers = [2, 3, 7, 8, 9]
 logging.info("Initializing a list: {}".format(my_numbers))
 double_number = [x*2 for x in my_numbers]
 logging.info("Double each element and then: {}".format(double_number))
+

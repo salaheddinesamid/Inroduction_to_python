@@ -120,7 +120,6 @@ def named_args(name, phone):
     logging.info("Hello {}".format(name) + ", your phone number is: {}".format(phone))
 
 
-named_args(name="John", phone="+3182086229")
 
 # --------------------- Default arguments:
 """
@@ -167,3 +166,22 @@ def mutli_return(x,y):
     return x*2,y*2
 
 a , b = mutli_return(2,4) # 'a' will hold the value of x*2 and 'y' will hold the value of y*2
+
+
+
+def convert_my_str():
+    try:
+        user_input = input("Please enter a value:")
+        data_type = input("In which data type do you want to convert it to? ")
+        new_user_input = None
+        if data_type == "int":
+            new_user_input = int(user_input)
+        elif data_type == "float":
+            new_user_input = float(user_input)
+
+        logging.info("The conversion went successfully, {}".format(new_user_input))
+    except ValueError as v:
+        logging.info(v)
+
+
+convert_my_str()
