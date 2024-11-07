@@ -9,14 +9,16 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s - %(levelname)s - %(message)s")
-# 1- Sytnax error:
+# 1- Syntax error:
 """
-When a syntax error occurs, Python halts execution and provide a detailed error message:
+- When a syntax error occurs, Python halts execution and provide a detailed error message:
 * Error type.
 * Line number.
 * Error location.
-Error messages point to the most likely problem area, but they are not always precise.
+- Error messages point to the most likely problem area, but they are not always precise.
 """
+# Example:
+#print("Hello)
 
 
 def syntax_error_test():

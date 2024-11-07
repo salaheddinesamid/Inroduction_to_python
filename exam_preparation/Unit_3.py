@@ -100,7 +100,8 @@ def for_loop_with_break():
 
 """
 * Iterators: an iterator allows you to iterate over values within a list, tuple and dictionaries.
-* Comprehensions provide a concise way to generate new lists by applying operations to each element of an existing iterable.
+* Comprehensions provide a concise way to generate new lists by applying operations to each element of an existing 
+iterable.
 """
 
 # Example of an iterator:

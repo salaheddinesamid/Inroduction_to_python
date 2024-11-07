@@ -8,6 +8,7 @@ import numpy
 import matplotlib.pyplot as plt
 import scipy
 import pandas
+
 # ------------------ Usage:
 """
 - The 'import' feature in Python allows developers to access functions, classes and variables from other Python files.
@@ -20,7 +21,7 @@ import pandas
 # ------------------ Namespaces:
 """
 - Namespace : is a container for variable and function name. It organizes names to prevent conflicts by keeping them
-distinct based on their usage ans scope.
+distinct based on their usage and scope.
 - Python organizes namespaces into three main types:
 1- Built-in namespace : contains all built-in functions and exceptions, like "print() , len()"...
 2- Global namespace : contains all variables and functions defined at the top level of a module, and accessible through 
@@ -28,6 +29,8 @@ the program.
 3- Local namespace : contains variables and functions defined within a function, accessible only within that function.
 - Namespace allows different parts of the code to use the same name without conflict, based on where that name is defined.
 """
+
+
 # Example:
 def floor(x):
     print("Floor: {}".format(x))
@@ -38,7 +41,6 @@ my_variable = 20.23
 floor(my_variable)
 # Using math.floor instead of calling floor() to avoid conflicts.
 print(math.floor(my_variable))
-
 
 # ----------------- Documentation
 """
@@ -55,21 +57,23 @@ print(math.floor(my_variable))
 - Python provides a built-in function documentation method called 'docstring'.
 - A docstrings is a string placed within triple quotes at the beginning of a function, or module or class to describe
 its purpose.
-- Unlike comments, docstrings can be retrieved at runtime and are more commonly used for generating external documentation.
+- Unlike comments, docstrings can be retrieved at runtime and are more commonly used for generating external 
+documentation.
 """
 
 # ------------------ Popular Data science packages
 
 """
 - Python offers several powerful libraries for data science, including:
-* Numpy : is a foundational for data science. It provides efficient data types and functions for array computations and support 
+* Numpy : is a foundational for data science. It provides efficient data types and functions for array computations and 
+support 
 large data sets with more speed and flexibility.
   -> Key features:
   1- Efficient data storage and handling with optimized array structures.
   2- High-speed computation.
   3- Robust suite of statistical functions.
-* Matplotlib : is a versatile library for creating a wide range of plots and charts. Its functions make it easy to virtualize
-data with plots like charts, graphs...
+* Matplotlib : is a versatile library for creating a wide range of plots and charts. Its functions make it easy to 
+virtualize data with plots like charts, graphs...
   -> Key features:
   1- Extensive customization options for plots.
   2- Compatible with Numpy arrays, making it easy to plot data.
@@ -86,6 +90,7 @@ DataFrame, 2D arrays for managing data.
   2- Simplified data import from format like (csv, json...).
   3- Built-in functions for filtering, storing and data manipulation.
 """
+
 
 # --------------------- NumPy
 # Initializing an array:
@@ -104,8 +109,8 @@ def numpy_example():
     # Compute and print the sum:
     print("First array sum= " + str(my_array.sum()))
     print("Second array sum= " + str(my_array.sum()))
-
-
+    print("Maximum number is : " + str(my_array.max()))
+numpy_example()
 # -------------------- Matplotlib:
 
 def matplotlib_example():
@@ -130,11 +135,10 @@ def matplotlib_example():
     plt.hist(my_data, bins=50)
     plt.show()
 
+
 # --------------- Pandas:
 
 def reading_csv():
     path = "/Users/salaheddine/Downloads/Car_Specifications.csv"
     car_data = pandas.read_csv(path)
     car_data.head()
-    
-

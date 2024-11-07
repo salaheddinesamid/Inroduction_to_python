@@ -56,7 +56,8 @@ except NameError:
 
 # 2- Global variable:
 """
-Global variable : are variables or functions that are defined outside the function and are accessible throughout the entire program.
+Global variable : are variables or functions that are defined outside the function and are accessible throughout 
+the entire program.
 """
 global_variable = 100
 logging.info("Defining global_variable: {}".format(global_variable))
@@ -112,8 +113,8 @@ There are two types of arguments:
 def positional_args(a, b):
     logging.info("The value of a = {}".format(a))
     logging.info("The value of b = {}".format(b))
-
-
+positional_args(b = 10, a = 3)
+positional_args(2 ,6)
 # 2- Named arguments:
 
 def named_args(name, phone):
@@ -184,4 +185,3 @@ def convert_my_str():
         logging.info(v)
 
 
-convert_my_str()
