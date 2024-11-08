@@ -27,7 +27,8 @@ distinct based on their usage and scope.
 2- Global namespace : contains all variables and functions defined at the top level of a module, and accessible through 
 the program.
 3- Local namespace : contains variables and functions defined within a function, accessible only within that function.
-- Namespace allows different parts of the code to use the same name without conflict, based on where that name is defined.
+- Namespace allows different parts of the code to use the same name without conflict, based on where that name is 
+defined.
 """
 
 
@@ -49,7 +50,8 @@ print(math.floor(my_variable))
 # 1- Comments:
 """
 - In Python, comments start with "#" symbol and are ignored by the interpreter.
-- They help explain code logic and intent, guiding others to understand the purpose of specific lines or functions.
+- They help explain code logic and intent, guiding others to understand the purpose of specific lines of code 
+or functions.
 """
 
 # 2- Docstrings:
@@ -66,8 +68,7 @@ documentation.
 """
 - Python offers several powerful libraries for data science, including:
 * Numpy : is a foundational for data science. It provides efficient data types and functions for array computations and 
-support 
-large data sets with more speed and flexibility.
+support large data sets with more speed and flexibility.
   -> Key features:
   1- Efficient data storage and handling with optimized array structures.
   2- High-speed computation.
@@ -142,3 +143,41 @@ def reading_csv():
     path = "/Users/salaheddine/Downloads/Car_Specifications.csv"
     car_data = pandas.read_csv(path)
     car_data.head()
+
+my_numpy_array = numpy.array([2,30,12,3,4])
+multi_dimensional_array = numpy.array([[1,3,4],[9,2,4]])
+reversed_multi_array = []
+print(my_numpy_array[1::3])
+multiplied_array = my_numpy_array * 3
+divided_array = my_numpy_array / 2
+print(multiplied_array)
+print(divided_array)
+print(multi_dimensional_array)
+print('The size of the array: {} is: {}'.format(multi_dimensional_array,numpy.size(multi_dimensional_array)))
+
+print(multi_dimensional_array.reshape(3,2))
+# Printing rows of an multi-dimensional array:
+
+def access_multi_dim_array():
+    def way_one():
+        for row in multi_dimensional_array:
+            for col in row:
+                print(col)
+
+    def way_two():
+        for i in range(0,len(multi_dimensional_array)):
+            for j in range(0,len(multi_dimensional_array[i])):
+                print(multi_dimensional_array[i][j])
+
+
+# Matrix A:
+A = numpy.array([[1,6,7],[2,7,9]])
+B = numpy.array([[3,7],[9,6],[2,1]])
+
+C = A + B
+D = numpy.matmul(A,B)
+
+print(numpy.shape(A))
+print(numpy.shape(B))
+
+print(D)
